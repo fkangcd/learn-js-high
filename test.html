@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>Local</button>
+  <button>Session</button>
+  <input type="text" name="" id="">
+  <script src="./cacheTest.js" type="module"></script>
+  <script src="./debounce.js"></script>
+  <script src="./throttle.js"></script>
+  <script src="./throttlecopy.js"></script>
+  <script>
+    let num = 0
+    function test() {
+      console.log(`第${++num}次点击`)
+    }
+
+    const ipt = document.querySelector("input")
+    ipt.oninput = throttle(test, 1000)
+  </script>
+</body>
+</html>
